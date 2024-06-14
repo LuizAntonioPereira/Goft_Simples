@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://c47wv2td258b4"]
+
+[ext_resource type="PackedScene" uid="uid://bsf70m76t35hn" path="res://Scene/ball.tscn" id="1_4ywkb"]
+[ext_resource type="PackedScene" uid="uid://b6yy7gsqb2u53" path="res://Scene/level_0.tscn" id="2_lbd20"]
+
+[sub_resource type="Sky" id="Sky_m3o5w"]
+
+[sub_resource type="Environment" id="Environment_3o4q0"]
+background_mode = 2
+sky = SubResource("Sky_m3o5w")
+tonemap_mode = 2
+ssao_enabled = true
+ssao_radius = 0.21
+ssao_intensity = 1.53
+ssao_power = 3.44
+glow_enabled = true
+
+[node name="Mananger" type="Node"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_3o4q0")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+shadow_bias = 0.2
+
+[node name="Ball" parent="." instance=ExtResource("1_4ywkb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1.761)
+metadata/_edit_lock_ = true
+
+[node name="Level_0" parent="." instance=ExtResource("2_lbd20")]

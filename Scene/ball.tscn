@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://bsf70m76t35hn"]
+
+[ext_resource type="Script" path="res://Script/ball.gd" id="1_iu1go"]
+[ext_resource type="Script" path="res://Script/Camera3D.gd" id="2_avvse"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_wrwh1"]
+friction = 0.4
+rough = true
+bounce = 0.35
+
+[sub_resource type="SphereMesh" id="SphereMesh_7hvos"]
+radius = 0.102
+height = 0.204
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_uyj28"]
+radius = 0.102
+
+[sub_resource type="QuadMesh" id="QuadMesh_fh4b0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tc1l3"]
+
+[node name="Ball" type="RigidBody3D"]
+collision_layer = 2
+collision_mask = 2
+physics_material_override = SubResource("PhysicsMaterial_wrwh1")
+script = ExtResource("1_iu1go")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_7hvos")
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_uyj28")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.173648, 0.984808, 0, -0.984808, 0.173648, 0, 4.099, 0)
+script = ExtResource("2_avvse")
+
+[node name="Scaler" type="Marker3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Scaler"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0.5)
+mesh = SubResource("QuadMesh_fh4b0")
+surface_material_override/0 = SubResource("StandardMaterial3D_tc1l3")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

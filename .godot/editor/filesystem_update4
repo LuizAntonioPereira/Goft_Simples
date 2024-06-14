@@ -1,0 +1,5 @@
+res://Scene/ball.tscn
+res://Assets/Material/red.tres
+res://Scene/mananger.tscn
+res://Scene/level_0.tscn
+res://Script/Camera3D.gd
