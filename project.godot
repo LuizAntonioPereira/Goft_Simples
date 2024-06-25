@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Goft_Simples"
+run/main_scene="res://Scene/mananger.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://Script/global.gd"
 
 [input]
 

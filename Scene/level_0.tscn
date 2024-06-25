@@ -1,7 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6yy7gsqb2u53"]
+[gd_scene load_steps=5 format=3 uid="uid://b6yy7gsqb2u53"]
 
 [ext_resource type="Material" uid="uid://c0ud8ap10h0la" path="res://Assets/Material/red.tres" id="1_745wx"]
 [ext_resource type="Material" uid="uid://b6vsk6qwx2bc5" path="res://Assets/Material/green.tres" id="2_h4bs5"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_vwlih"]
+height = 0.2
+radius = 0.2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3qtnj"]
 size = Vector3(20, 1, 20)
@@ -54,10 +58,17 @@ material = ExtResource("2_h4bs5")
 
 [node name="hole" type="CSGCylinder3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.935, 0.766, -1.45)
+layers = 3
 operation = 2
 radius = 0.205
 height = 1.216
 sides = 18
+
+[node name="Area3D" type="Area3D" parent="CSGCombiner3D/hole" groups=["hole"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.518057, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGCombiner3D/hole/Area3D"]
+shape = SubResource("CylinderShape3D_vwlih")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 

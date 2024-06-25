@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c47wv2td258b4"]
+[gd_scene load_steps=6 format=3 uid="uid://c47wv2td258b4"]
 
 [ext_resource type="PackedScene" uid="uid://bsf70m76t35hn" path="res://Scene/ball.tscn" id="1_4ywkb"]
 [ext_resource type="PackedScene" uid="uid://b6yy7gsqb2u53" path="res://Scene/level_0.tscn" id="2_lbd20"]
+[ext_resource type="PackedScene" uid="uid://bt3kfhpf1b7le" path="res://Scene/UI.tscn" id="3_b4ltt"]
 
 [sub_resource type="Sky" id="Sky_m3o5w"]
 
@@ -30,3 +31,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1.761)
 metadata/_edit_lock_ = true
 
 [node name="Level_0" parent="." instance=ExtResource("2_lbd20")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("3_b4ltt")]

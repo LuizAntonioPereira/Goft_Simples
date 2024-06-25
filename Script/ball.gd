@@ -40,7 +40,7 @@ func _process(delta) -> void:
 	scaler_follow()
 	
 	pull_metter()
-	
+
 #Shothing the golf ball.
 func shoot(vector:Vector3)->void:
 	velocity = Vector3(vector.x,0,vector.z)
@@ -55,7 +55,7 @@ func pull_metter() -> void:
 	#Calling the raycast from the camera node.
 	var ray_cast = camera_3d.camera_raycast()
 	
-	if not ray_cast.is_empty():
+	if not ray_cast.is_empty() and Global.reset == false:
 		#Calculating the distance between the golf ball and the mouse position.
 		distance = self.position.distance_to(ray_cast.position)
 		#Calculating the direction vector between golf ball ,and mouse position.
@@ -70,3 +70,8 @@ func pull_metter() -> void:
 		else:
 			#Resetting the scaler.
 			scaler.scale.z = 0.01
+			
+func _on_area_3d_area_entered(area):
+	if area.is_in_group("hole"):
+		Global.reset = true
+		global_position = Vector3(0,1,1.761)
