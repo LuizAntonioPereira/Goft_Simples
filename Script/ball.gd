@@ -12,6 +12,7 @@ var speed : Vector3
 var distance : float
 var diraction :Vector3
 
+var success : bool = false
 
 func _ready() -> void:
 	#We set the scaler as top level to ignore parent's transformations.
@@ -73,5 +74,11 @@ func pull_metter() -> void:
 			
 func _on_area_3d_area_entered(area):
 	if area.is_in_group("hole"):
-		Global.reset = true
-		global_position = Vector3(0,1,1.761)
+		if (!success):
+			success = true
+			print("Winner!")
+			Global.reset = true
+			await get_tree().create_timer(0.5).timeout
+			
+			global_position = Vector3(0,1,1.761)
+			success = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://bt3kfhpf1b7le"]
+[gd_scene load_steps=2 format=3 uid="uid://d2hi61i78m7fe"]
 
 [ext_resource type="Script" path="res://Script/UI.gd" id="1_6di6m"]
 
@@ -24,7 +24,7 @@ offset_right = 0.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "Clique na bola e arraste para move-la."
+text = "t_init"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1.5

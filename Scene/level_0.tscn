@@ -65,7 +65,7 @@ height = 1.216
 sides = 18
 
 [node name="Area3D" type="Area3D" parent="CSGCombiner3D/hole" groups=["hole"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.518057, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.684053, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CSGCombiner3D/hole/Area3D"]
 shape = SubResource("CylinderShape3D_vwlih")
