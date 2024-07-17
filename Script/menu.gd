@@ -3,6 +3,7 @@ extends HBoxContainer
 const SAVE_DIR = "user://idioma/"
 var data = ""
 var save_path = SAVE_DIR + "idioma.dat"
+var transition = load("res://Scene/SceneTransition.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,9 +18,11 @@ func _ready():
 func _process(delta):
 	pass
 
-func language_pressed():
+func language_pressed():	
 	get_tree().change_scene_to_file("res://Scene/language.tscn")
 
 
 func start_pressed():
-	get_tree().change_scene_to_file("res://Scene/mananger.tscn")
+	var scene = transition.instantiate()
+	get_node("/root").add_child(scene)
+	

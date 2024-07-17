@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://b2cmchfujvsc"
+
+[deps]
+
+files=["res://Assets/Translation/language_golf.pt_BR.translation", "res://Assets/Translation/language_golf.en_US.translation", "res://Assets/Translation/language_golf.es_ES.translation"]
+
+source_file="res://Assets/Translation/language_golf.csv"
+dest_files=["res://Assets/Translation/language_golf.pt_BR.translation", "res://Assets/Translation/language_golf.en_US.translation", "res://Assets/Translation/language_golf.es_ES.translation"]
+
+[params]
+
+compress=true
+delimiter=0

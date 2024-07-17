@@ -1,6 +1,12 @@
 res://Scene/ball.tscn
 res://Assets/Material/red.tres
-res://Scene/level_0.tscn
 res://Scene/menu.tscn
 res://Scene/language.tscn
 res://Scene/UI.tscn
+res://Scene/level_0.tscn
+res://Scene/mananger.tscn
+res://Scene/SceneTransition.tscn
+res://Script/menu.gd
+res://Script/SceneTransition.gd
+res://Script/ball.gd
+res://Script/UI.gd

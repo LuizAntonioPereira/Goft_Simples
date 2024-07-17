@@ -2,9 +2,10 @@
 b_start,Iniciar,Start,Comienzo
 b_credito,Creditos,Credits,Creditos
 b_language,Idiomas,Languages,Idiomas
-b_pt,Português,Portuguese,Portugués
-b_en,Inglés,English,Inglés
-b_es,Espanhol,Spanish,Español
 l_name,Escolha seu idioma,Choose your language,Seleccione su idioma
 lbl_r,Mover direita,Move right,Mover a la derecha
 t_init,Clique na bola e arraste para move-la.,Click on the ball and drag to move it.,Haz clic en la bola y arrástrala para moverla.
+l_game,Golf Simples,Simple Golf,Golf Sencillo
+b_pt,Português,Portuguese,Portugués
+b_es,Espanhol,Spanish,Español
+b_en,Inglês,English,Inglés

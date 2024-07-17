@@ -23,10 +23,15 @@ radius = 0.102
 radius = 0.09
 
 [node name="Ball" type="RigidBody3D"]
+disable_mode = 2
 collision_layer = 2
 collision_mask = 2
+mass = 1.5
 physics_material_override = SubResource("PhysicsMaterial_wrwh1")
+continuous_cd = true
+contact_monitor = true
 script = ExtResource("1_iu1go")
+accel = 4
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
 mesh = SubResource("SphereMesh_7hvos")

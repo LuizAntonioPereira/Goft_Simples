@@ -45,7 +45,8 @@ func _process(delta) -> void:
 #Shothing the golf ball.
 func shoot(vector:Vector3)->void:
 	velocity = Vector3(vector.x,0,vector.z)
-	
+	#if $RayCast3D.is_colliding():
+	#	if not $RayCast3D.get_collider().is_in_group("Wall"):
 	self.apply_impulse(velocity, Vector3.ZERO)
 	
 #Function to the follow golf ball.
@@ -75,8 +76,7 @@ func pull_metter() -> void:
 func _on_area_3d_area_entered(area):
 	if area.is_in_group("hole"):
 		if (!success):
-			success = true
-			print("Winner!")
+			success = true			
 			Global.reset = true
 			await get_tree().create_timer(0.5).timeout
 			

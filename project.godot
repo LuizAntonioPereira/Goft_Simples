@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Global="*res://Script/global.gd"
 
+[dotnet]
+
+project/assembly_name="Goft_Simples"
+
 [input]
 
 left_mb={
@@ -29,7 +33,11 @@ left_mb={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://Assets/Transnlation/language_golf.csv", "res://Assets/Transnlation/language_golf.en_US.translation", "res://Assets/Transnlation/language_golf.es_ES.translation", "res://Assets/Transnlation/language_golf.pt_BR.translation")
+locale/translations=PackedStringArray("res://Assets/Translation/language_golf.en_US.translation", "res://Assets/Translation/language_golf.es_ES.translation", "res://Assets/Translation/language_golf.pt_BR.translation")
+
+[physics]
+
+3d/physics_engine="JoltPhysics3D"
 
 [rendering]
 

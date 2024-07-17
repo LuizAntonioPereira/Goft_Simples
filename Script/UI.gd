@@ -4,6 +4,8 @@ var current_language = TranslationServer.get_locale()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	self.visible = false
+	await get_tree().create_timer(1.0).timeout
 	self.visible = true
 	pass # Replace with function body.
 

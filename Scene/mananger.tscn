@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bsf70m76t35hn" path="res://Scene/ball.tscn" id="1_4ywkb"]
 [ext_resource type="PackedScene" uid="uid://b6yy7gsqb2u53" path="res://Scene/level_0.tscn" id="2_lbd20"]
-[ext_resource type="PackedScene" uid="uid://bt3kfhpf1b7le" path="res://Scene/UI.tscn" id="3_b4ltt"]
+[ext_resource type="PackedScene" uid="uid://d2hi61i78m7fe" path="res://Scene/UI.tscn" id="3_b4ltt"]
 
 [sub_resource type="Sky" id="Sky_m3o5w"]
 
